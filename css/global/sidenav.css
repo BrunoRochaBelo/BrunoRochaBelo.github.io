@@ -1,0 +1,57 @@
+/* Grid */
+.sidenav-template {
+  background: linear-gradient(135deg, var(--cor-p1), var(--cor-p2));
+  display: grid;
+  align-content: start;
+  justify-items: stretch;
+  grid:
+    "sidenav-home"
+    "sidenav-cad"
+    "sidenav-config";
+}
+/* Grid-areas */
+.sidenav-home {
+  grid-area: sidenav-home;
+}
+
+.sidenav-cad {
+  grid-area: sidenav-cad;
+}
+
+.sidenav-config {
+  grid-area: sidenav-config;
+}
+
+/* Sub-grid */
+.sidenav-menu-template {
+  display: grid;
+  grid:
+    "sidenav-menu-header"
+    "sidenav-menu-content";
+}
+/* Sub-grid-areas */
+.sidenav-menu-header {
+  grid-area: sidenav-menu-header;
+}
+
+.sidenav-menu-content {
+  grid-area: sidenav-menu-content;
+}
+/* Estilos - sidenav-menu-header */
+.sidenav-menu-header strong {
+  display: block;
+  padding: 15px;
+  text-align: center;
+}
+/* Estilos - sidenav-menu-content */
+.sidenav-menu-content a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  transition: 0.1s;
+}
+
+.sidenav-menu-content a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}

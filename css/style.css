@@ -1,0 +1,17 @@
+@import "./global/global.css";
+@import "./utilidades/tipografia.css";
+@import "./utilidades/cores.css";
+
+/* Global */
+@import "./global/container.css";
+@import "./global/header.css";
+@import "./global/sidenav.css";
+
+/* Utilidades */
+@import "./utilidades/componentes.css";
+
+/* Home */
+@import "./home/home.css";
+
+/* Mensagem */
+@import "./mensagem/mensagem.css";

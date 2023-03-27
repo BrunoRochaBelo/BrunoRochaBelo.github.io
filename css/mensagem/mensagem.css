@@ -1,0 +1,110 @@
+/* Grid */
+.mensagem-template {
+  display: grid;
+  gap: 6px;
+  padding: 12px 15px 40px 15px;
+  align-content: center;
+  justify-content: center;
+  grid:
+    "mensagem-sidenav mensagem-section" 1fr
+    / minmax(200px, 250px) minmax(600px, 900px);
+}
+
+/* Grid-areas */
+.mensagem-section {
+  grid-area: mensagem-section;
+  text-align: center;
+  background-color: var(--cor-0);
+  border-radius: 4px;
+}
+
+.mensagem-sidenav {
+  grid-area: mensagem-sidenav;
+  border-radius: 4px;
+}
+
+/* Sub-grid */
+.mensagem-sidenav-content-template {
+  display: grid;
+  align-content: start;
+  justify-items: stretch;
+  gap: 6px;
+  grid:
+    "mensagem-sidenav-content-template-pesquisa"
+    "mensagem-sidenav-content-template-cxentrada";
+}
+/* Sub-grid-areas */
+.mensagem-sidenav-content-template-pesquisa {
+  grid-area: mensagem-sidenav-content-template-pesquisa;
+  border-radius: 4px;
+  background-color: var(--cor-0);
+}
+
+.mensagem-sidenav-content-template-cxentrada {
+  grid-area: mensagem-sidenav-content-template-cxentrada;
+  border-radius: 4px;
+  background-color: var(--cor-0);
+}
+/* Estilos - Itens-mensagem-sidenav-content-template-pesquisa */
+.mensagem-sidenav-content-template-pesquisa > input {
+  display: block;
+  width: 90%;
+  padding: 5px;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+.pesquisa {
+  display: inline;
+}
+/* Estilos - Itens-mensagem-sidenav-content-template-cxentrada */
+.mensagem-sidenav-content-template-cxentrada header {
+  background-color: var(--cor-4);
+  padding: 3px;
+  border-radius: 4px;
+}
+.mensagem-sidenav-content-template-cxentrada strong {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.mensagem-sidenav-content-template-cxentrada ul {
+  width: 100%;
+}
+.mensagem-sidenav-content-template-cxentrada a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: var(--cor-11);
+  transition: 0.1s;
+}
+.mensagem-sidenav-content-template-cxentrada a:hover {
+  background: var(--cor-p4);
+  border-radius: 4px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 935px) {
+  .mensagem-template {
+    padding: 8px 15px 40px 15px;
+    grid:
+      "mensagem-sidenav" 1fr
+      "mensagem-section" 5fr
+      /1fr;
+  }
+  .mensagem-sidenav-content-template {
+    display: grid;
+    align-content: stretch;
+    justify-items: stretch;
+    gap: 6px;
+    grid:
+      "mensagem-sidenav-content-template-pesquisa"
+      "mensagem-sidenav-content-template-cxentrada";
+  }
+  .mensagem-sidenav {
+    width: 100%;
+  }
+  .mensagem-sidenav-content-template-cxentrada ul {
+    display: flex;
+  }
+}

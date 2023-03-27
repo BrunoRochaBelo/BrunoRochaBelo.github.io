@@ -1,0 +1,125 @@
+/* Grid */
+.header-template {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  background: var(--cor-p1);
+  grid: "header-title header-menu header-user";
+}
+/* Grid-areas */
+.header-title {
+  grid-area: header-title;
+}
+
+.header-menu {
+  grid-area: header-menu;
+}
+
+.header-user {
+  grid-area: header-user;
+  border-radius: 4px;
+  padding: 2px;
+}
+/* Estilos - header-template */
+.header-title {
+  font-size: 1.2rem;
+  color: var(--cor-1);
+}
+
+/* Sub-grid-areas */
+.header-menu-template {
+  display: flex;
+  gap: 3px;
+}
+.home {
+  grid-area: home;
+}
+.mensagem {
+  grid-area: mensagem;
+}
+.agenda {
+  grid-area: agenda;
+}
+.conta {
+  grid-area: conta;
+}
+.coleta {
+  grid-area: coleta;
+}
+/* Estilos - header-menu-template */
+.header-menu-template li {
+  align-self: center;
+  justify-self: center;
+}
+.header-menu-template a {
+  display: block;
+  font-size: 1.1rem;
+  padding: 10px;
+  color: white;
+  border-radius: 4px;
+  transition: 0.15s;
+}
+.header-menu-template a:hover {
+  background: var(--cor-p2);
+  padding: 6px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px) {
+  .header-menu-template li {
+    margin: 2px;
+  }
+  .header-menu-template a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    background-color: var(--cor-p5);
+    padding: 6px;
+  }
+  .header-menu-template a:hover {
+    padding: 7px;
+  }
+}
+
+@media (max-width: 660px) {
+  .container-template {
+    grid:
+      "header" 55px
+      "main" 1fr;
+  }
+  .header-template {
+    padding: 3px;
+    grid:
+      "header-title header-user" 15px
+      "header-menu header-menu";
+  }
+  .header-title {
+    font-size: 0.8rem;
+  }
+
+  .header-menu-template a {
+    font-size: 0.8rem;
+    background-color: var(--cor-p8);
+  }
+}
+
+/* Grid */
+/*.header-template {
+  background: linear-gradient(135deg, var(--cor-p1), var(--cor-p2));
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid: "header-menu header-title header-user";
+}
+/* Grid-areas */
+/*.header-title {
+  grid-area: header-title;
+}
+
+.header-menu {
+  grid-area: header-menu;
+}
+
+.header-user {
+  grid-area: header-user;
+}
+*/

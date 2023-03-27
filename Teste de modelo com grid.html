@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Teste de modelo com grid</title>
+  <meta charset="UTF-8">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="description" content="Testando um modelo padrão usando só grid-template.">
+
+  <!-- <link rel="preload" href="./css/style.css" as="style">->
+    <link rel="stylesheet" href="./css/style.css"> -->
+
+  <style type="text/css">
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 300;
+      color: #111111;
+    }
+
+    .container {
+      max-width: 1024px;
+      margin: 0 auto;
+      display: grid;
+      height: 100vh;
+      grid-gap: 10px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "content"
+        "sidebar"
+        "footer"
+    }
+
+    .container-header {
+      background-color: rgb(194, 196, 247);
+      grid-area: header;
+    }
+
+    .container-sidebar {
+      background-color: aqua;
+      grid-area: sidebar;
+    }
+
+    .container-content {
+      background-color: bisque;
+      grid-area: content;
+    }
+
+    .container-footer {
+      background-color: aquamarine;
+      grid-area: footer;
+    }
+
+    @media screen and (min-width: 600px) {
+      .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px 1fr 100px;
+        grid-template-areas:
+          "header header header"
+          "sidebar content content"
+          "footer footer footer"
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="container-header">Header</header>
+    <aside class="container-sidebar">Sidebar</aside>
+    <main class="container-content">Content</main>
+    <footer class="container-footer">Footer</footer>
+  </div>
+</body>
+
+</html>

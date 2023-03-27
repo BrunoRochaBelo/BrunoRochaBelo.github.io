@@ -1,0 +1,44 @@
+.container-template {
+  display: grid;
+  height: 100vh;
+  grid:
+    "header" 40px
+    "main" 1fr
+    / 1fr;
+}
+/* container-areas */
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+  background-color: var(--cor-2);
+}
+
+/*.sidenav {
+  grid-area: sidenav;
+}*/
+
+/*.container-template {
+  display: grid;
+  height: 100vh;
+  background-color: var(--cor-p1);
+  grid:
+    "header header" 1fr
+    "sidenav main" 10fr
+    / 1fr 6fr;
+}
+/* container-areas */
+/*.header {
+  grid-area: header;
+}
+
+.sidenav {
+  grid-area: sidenav;
+}
+
+.main {
+  grid-area: main;
+  background-color: var(--cor-4);
+}
+*/
