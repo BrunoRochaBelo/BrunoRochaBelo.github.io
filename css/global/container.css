@@ -2,7 +2,7 @@
   display: grid;
   height: 100vh;
   grid:
-    "header" 40px
+    "header" 45px
     "main" 1fr
     / 1fr;
 }
@@ -12,7 +12,7 @@
 }
 .main {
   grid-area: main;
-  background-color: var(--cor-2);
+  background-color: var(--cor-4);
 }
 
 /*.sidenav {

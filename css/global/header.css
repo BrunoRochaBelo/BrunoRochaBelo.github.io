@@ -10,19 +10,18 @@
 .header-title {
   grid-area: header-title;
 }
-
 .header-menu {
   grid-area: header-menu;
 }
-
 .header-user {
   grid-area: header-user;
-  border-radius: 4px;
-  padding: 2px;
 }
 /* Estilos - header-template */
 .header-title {
   font-size: 1.2rem;
+  color: var(--cor-1);
+}
+.header-template .header-user {
   color: var(--cor-1);
 }
 
@@ -30,6 +29,7 @@
 .header-menu-template {
   display: flex;
   gap: 3px;
+  text-transform: uppercase;
 }
 .home {
   grid-area: home;
@@ -60,37 +60,36 @@
   transition: 0.15s;
 }
 .header-menu-template a:hover {
-  background: var(--cor-p2);
-  padding: 6px;
+  background: var(--cor-p8);
+  padding: 10px;
 }
 
 /* RESPONSIVO */
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
   .header-menu-template li {
     margin: 2px;
   }
   .header-menu-template a {
     text-decoration: none;
-    font-size: 0.9rem;
-    background-color: var(--cor-p5);
-    padding: 6px;
-  }
-  .header-menu-template a:hover {
-    padding: 7px;
+    background-color: var(--cor-p2);
   }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 715px) {
   .container-template {
     grid:
-      "header" 60px
+      "header" 75px
       "main" 1fr;
+  }
+  .header-title {
+    justify-self: end;
   }
   .header-user {
     justify-self: end;
   }
   .header-template {
     padding: 5px;
+    gap: 5px;
     grid:
       "header-title header-user" 20px
       "header-menu header-menu";
@@ -98,11 +97,9 @@
   .header-title {
     font-size: 0.8rem;
   }
-
   .header-menu-template a {
     text-decoration: none;
-    background-color: var(--cor-p8);
-    padding: 7px;
+    background-color: var(--cor-p2);
   }
 }
 
