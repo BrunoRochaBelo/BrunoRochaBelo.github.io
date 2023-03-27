@@ -83,13 +83,16 @@
 @media (max-width: 660px) {
   .container-template {
     grid:
-      "header" 55px
+      "header" 60px
       "main" 1fr;
   }
+  .header-user {
+    justify-self: end;
+  }
   .header-template {
-    padding: 3px;
+    padding: 5px;
     grid:
-      "header-title header-user" 15px
+      "header-title header-user" 20px
       "header-menu header-menu";
   }
   .header-title {
@@ -97,8 +100,9 @@
   }
 
   .header-menu-template a {
-    font-size: 0.8rem;
+    text-decoration: none;
     background-color: var(--cor-p8);
+    padding: 7px;
   }
 }
 
