@@ -28,8 +28,8 @@
   justify-items: stretch;
   gap: 6px;
   grid:
-    "mensagem-sidenav-content-template-pesquisa"
-    "mensagem-sidenav-content-template-cxentrada";
+    "mensagem-sidenav-content-template-cxentrada"
+    "mensagem-sidenav-content-template-pesquisa";
 }
 /* Sub-grid-areas */
 .mensagem-sidenav-content-template-pesquisa {
@@ -96,8 +96,8 @@
     justify-items: stretch;
     gap: 6px;
     grid:
-      "mensagem-sidenav-content-template-pesquisa"
-      "mensagem-sidenav-content-template-cxentrada";
+      "mensagem-sidenav-content-template-cxentrada"
+      "mensagem-sidenav-content-template-pesquisa";
   }
   .mensagem-sidenav {
     width: 100%;
